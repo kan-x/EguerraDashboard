@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  margin:2%;
+}
+
+.SpaceDiv {
+  height: 2vmin;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  background-color: #b0b0b03a;  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.HomePageLink:hover {
+  text-decoration: underline;
+}
+
+.EguerraIcon {
+  width: 34px;
+  height: 34px;
+}
+
+
