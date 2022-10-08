@@ -24,6 +24,7 @@ const dataFormatter = (input) => {
 
 var teamRev = [{}]; 
 var items=[{}];
+var teams=[];
 
 // function fetchAnalytics() {
 //   fetch(
@@ -63,11 +64,13 @@ function App() {
                   teamRev[0]["topic"]="Revenue";
                   Object.keys(items[1]).forEach(
                     key=>{
-                      if(!key.includes("localhost"))
+                      if(!key.includes("localhost")&&!teams.includes(key))
                       {
-                        teamRev[0][key.toString()]=items[1][key]
+                        teamRev[0][key.toString()]=items[1][key];
+                        teams.push(key.toString());
                       }
                     });
+                    console.log(teams);
                   setDataIsLoaded(true);                                
                 })  
 
@@ -85,8 +88,8 @@ function App() {
         <BarChart
           data={teamRev}
           dataKey="topic"
-          categories={["192", "eguerra3", "store1", "venky"]}
-          colors={["blue", "teal", "amber", "rose", "indigo", "emerald"]}
+          categories={teams}
+          colors={["blue", "teal", "amber", "rose", "indigo", "emerald", "grey", "pink", "sky", "violet", "fuchsia", "orange", "green", "yellow", "amber", "lime", "rose", "cyan", "purple", "red"]}
           valueFormatter={dataFormatter}
           marginTop="mt-6"
           yAxisWidth="w-12"
