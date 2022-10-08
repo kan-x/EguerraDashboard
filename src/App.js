@@ -17,7 +17,7 @@ const orders = [
 ];
 
 const dataFormatter = (input) => {
-  return "$ " + Intl.NumberFormat("us").format(input).toString();
+  return "₹ " + Intl.NumberFormat("us").format(input).toString();
 };
 
 
@@ -64,7 +64,7 @@ function App() {
                   teamRev[0]["topic"]="Revenue";
                   Object.keys(items[1]).forEach(
                     key=>{
-                      if(!key.includes("localhost")&&!teams.includes(key))
+                      if(!key.includes("localhost")&&!teams.includes(key)&&!key.includes("192")&&!key.includes("venky")&&!key.includes("eguerra3")&&!key.includes("store1"))
                       {
                         teamRev[0][key.toString()]=items[1][key];
                         teams.push(key.toString());
@@ -92,8 +92,9 @@ function App() {
           colors={["blue", "teal", "amber", "rose", "indigo", "emerald", "grey", "pink", "sky", "violet", "fuchsia", "orange", "green", "yellow", "amber", "lime", "rose", "cyan", "purple", "red"]}
           valueFormatter={dataFormatter}
           marginTop="mt-6"
-          yAxisWidth="w-12"
-          showTooltip={true}         
+          // yAxisWidth="w-12"
+          showTooltip={true}
+          showLegend         
         />
       </Card> 
     </div>
