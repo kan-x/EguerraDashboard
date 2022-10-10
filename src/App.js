@@ -64,7 +64,7 @@ function App() {
                   teamRev[0]["topic"]="Revenue";
                   Object.keys(items[1]).forEach(
                     key=>{
-                      if(!key.includes("localhost")&&!teams.includes(key)&&!key.includes("192")&&!key.includes("venky")&&!key.includes("eguerra3")&&!key.includes("store1"))
+                      if(!key.includes("localhost")&&!teams.includes(key)&&!key.includes("192")&&!key.includes("venky")&&!key.includes("eguerra3")&&!key.includes("store1")&&!key.includes("indophilia"))
                       {
                         teamRev[0][key.toString()]=items[1][key];
                         teams.push(key.toString());
